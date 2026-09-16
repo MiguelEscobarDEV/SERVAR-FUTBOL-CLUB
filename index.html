@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Servar Fútbol Club — Web oficial</title>
+<meta name="description" content="Página oficial de Servar Fútbol Club: plantilla, calendario, resultados y equipación oficial.">
+
+<link rel="icon" type="image/png" href="img/logo/escudo.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ============================================
+     MENÚ / HEADER
+     ============================================ -->
+<header class="header" id="header">
+  <div class="header__inner">
+    <a href="#inicio" class="header__brand">
+      <img src="img/logo/escudo.png" alt="Escudo Servar Fútbol Club" class="header__crest">
+      <span class="header__name">Servar FC</span>
+    </a>
+
+    <nav class="nav" id="nav">
+      <a href="#plantilla" class="nav__link">Plantilla</a>
+      <a href="#calendario" class="nav__link">Calendario</a>
+      <a href="#resultado" class="nav__link">Resultados</a>
+      <a href="#equipacion" class="nav__link">Equipación</a>
+    </nav>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>
+
+<div class="nav-backdrop" id="navBackdrop"></div>
+
+<main>
+
+  <!-- ============================================
+       HERO
+       ============================================ -->
+  <section class="hero" id="inicio">
+    <div class="hero__glow" aria-hidden="true"></div>
+    <div class="hero__content">
+      <img src="img/logo/escudo.png" alt="Escudo Servar Fútbol Club" class="hero__crest">
+      <h1 class="hero__title">Servar Fútbol Club</h1>
+      <p class="hero__tagline">Temporada 2026/2027</p>
+    </div>
+    <a href="#plantilla" class="hero__scroll" aria-label="Ir al contenido">
+      <span></span>
+    </a>
+  </section>
+
+  <!-- ============================================
+       PLANTILLA — CARRUSEL DE JUGADORES
+       ============================================ -->
+  <section class="section section--dark" id="plantilla">
+    <div class="section__header">
+      <span class="section__eyebrow">Temporada 26/27</span>
+      <h2 class="section__title">La Plantilla</h2>
+      <p class="section__desc">Toca una tarjeta para ver la ficha completa del jugador.</p>
+    </div>
+
+    <div class="carousel" id="carouselJugadores">
+      <button class="carousel__arrow carousel__arrow--left" id="jugadoresPrev" aria-label="Jugador anterior">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+
+      <div class="carousel__track" id="jugadoresTrack"></div>
+
+      <button class="carousel__arrow carousel__arrow--right" id="jugadoresNext" aria-label="Siguiente jugador">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+  </section>
+
+  <!-- ============================================
+       CALENDARIO — CARRUSEL DE PARTIDOS
+       ============================================ -->
+  <section class="section" id="calendario">
+    <div class="section__header">
+      <span class="section__eyebrow">Temporada 26/27</span>
+      <h2 class="section__title">Calendario</h2>
+      <p class="section__desc">Se abre automáticamente en el próximo partido. Usa las flechas para navegar.</p>
+    </div>
+
+    <div class="carousel carousel--compact" id="carouselPartidos">
+      <button class="carousel__arrow carousel__arrow--left" id="partidosPrev" aria-label="Partido anterior">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+
+      <div class="carousel__track" id="partidosTrack"></div>
+
+      <button class="carousel__arrow carousel__arrow--right" id="partidosNext" aria-label="Siguiente partido">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+
+    <div class="venue" id="venueCard"></div>
+  </section>
+
+  <!-- ============================================
+       ÚLTIMO RESULTADO (calculado automáticamente)
+       ============================================ -->
+  <section class="section section--dark" id="resultado">
+    <div class="section__header">
+      <span class="section__eyebrow">Último partido</span>
+      <h2 class="section__title">Cómo quedamos</h2>
+    </div>
+
+    <div class="resultado" id="resultadoDestacado">
+      <!-- Generado por JavaScript -->
+    </div>
+  </section>
+
+  <!-- ============================================
+       EQUIPACIÓN
+       ============================================ -->
+  <section class="section" id="equipacion">
+    <div class="section__header">
+      <span class="section__eyebrow">Temporada 26/27</span>
+      <h2 class="section__title">Equipación Oficial</h2>
+    </div>
+
+    <div class="kits" id="kitsContainer">
+      <!-- Generado por JavaScript -->
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================================
+     FOOTER
+     ============================================ -->
+<footer class="footer">
+  <img src="img/logo/escudo.png" alt="Escudo Servar Fútbol Club" class="footer__crest">
+  <p class="footer__name">Servar Fútbol Club</p>
+  <div class="footer__social">
+    <a href="#" aria-label="Instagram" class="footer__icon">
+      <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.8"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor"/></svg>
+    </a>
+    <a href="#" aria-label="Facebook" class="footer__icon">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M14 8.5h2.5V5H14c-2.2 0-4 1.8-4 4v2H8v3.5h2V21h3.5v-6.5H16l.5-3.5h-3V9c0-.6.4-1 1-1z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+    </a>
+    <a href="#" aria-label="X / Twitter" class="footer__icon">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M4 4l16 16M20 4L4 20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+    </a>
+  </div>
+  <p class="footer__copy">© 2026 Servar Fútbol Club</p>
+  <p class="footer__credit">
+    <a href="https://www.instagram.com/mecf__/" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.8"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor"/></svg>
+      Sitio desarrollado por @mecf__
+    </a>
+  </p>
+</footer>
+
+<script src="js/datos.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

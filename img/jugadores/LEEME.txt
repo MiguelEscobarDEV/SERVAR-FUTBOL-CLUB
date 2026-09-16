@@ -1,0 +1,6 @@
+Aquí van las fotos de los jugadores.
+Nombra cada archivo así: dorsal-nombre-apellido.jpg
+Ejemplo: 10-juan-perez.jpg
+
+Luego, en js/datos.js, escribe esa misma ruta en el campo 'foto' del jugador correspondiente:
+foto: "img/jugadores/10-juan-perez.jpg"
