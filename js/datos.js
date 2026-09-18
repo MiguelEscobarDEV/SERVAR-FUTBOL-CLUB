@@ -67,72 +67,264 @@
 
 const jugadores = [
   {
-    nombre: "Alejandro",
-    dorsal: 8,
-    posicion: "Volante",
-    piernaHabil: "Derecha",
-    altura: "1.85m",
-    fechaNacimiento: "2002-05-15",
-    nacionalidad: "España",
-    foto: "img/jugadores/8-Alejandro.png",
-    estado: "Nuevo fichaje"
+    // TÉCNICO — no es jugador, no tiene dorsal. Reemplaza el nombre cuando lo tengas.
+    nombre: "Julián Sanclemente",
+    dorsal: "DT",
+    posicion: "Entrenador",
+    piernaHabil: "Izquierda",
+    altura: "1.78m",
+    fechaNacimiento: "1990-01-01",
+    nacionalidad: "Colombiano",
+    foto: "img/jugadores/JULIAN-SANCLEMENTE.JPG",
+    estado: ""
   },
   {
-    nombre: "Nombre Apellido",
-    dorsal: 4,
-    posicion: "Defensa",
+    nombre: "Juan Bocanegra",
+    dorsal: 9,
+    posicion: "Delantero",
     piernaHabil: "Izquierda",
-    altura: "1.82m",
-    fechaNacimiento: "1999-05-15",
-    nacionalidad: "España",
-    foto: "img/jugadores/placeholder.jpg",
+    altura: "1.75m",
+    fechaNacimiento: "1987-01-27",
+    nacionalidad: "Colombiano",
+    foto: "img/jugadores/9-Juan-Bocanegra.jpg",
     estado: "Renovación"
   },
   {
-    nombre: "Nombre Apellido",
-    dorsal: 8,
-    posicion: "Centrocampista",
-    piernaHabil: "Derecha",
-    altura: "1.76m",
-    fechaNacimiento: "2003-05-15",
-    nacionalidad: "Argentina",
-    foto: "img/jugadores/placeholder.jpg",
-    estado: ""
+    nombre: "Miguel Escobar",
+    dorsal: 10,
+    posicion: "Medio",
+    piernaHabil: "Izquierda",
+    altura: "1.67m",
+    fechaNacimiento: "1993-07-03",
+    nacionalidad: "Colombiano",
+    foto: "img/jugadores/10-Miguel-Escobar.jpg",
+    estado: "Renovación"
   },
   {
-    nombre: "Nombre Apellido",
-    dorsal: 10,
-    posicion: "Delantero",
-    piernaHabil: "Ambidiestro",
-    altura: "1.78m",
-    fechaNacimiento: "2004-05-15",
-    nacionalidad: "España",
-    foto: "img/jugadores/placeholder.jpg",
+    nombre: "Kevin Escobar",
+    dorsal: 19,
+    posicion: "Lateral",
+    piernaHabil: "Izquierda",
+    altura: "1.75m",
+    fechaNacimiento: "2001-05-19",
+    nacionalidad: "Colombiano",
+    foto: "img/jugadores/19-Kevin-Escobar.jpg",
+    estado: "Renovación"
+  },
+  {
+    nombre: "José Giménez",
+    dorsal: 4,
+    posicion: "Central",
+    piernaHabil: "Derecha",
+    altura: "1.80m",
+    fechaNacimiento: "2005-04-18",
+    nacionalidad: "Venezolano",
+    foto: "img/jugadores/4-Jose-Gimenez.jpg",
+    estado: "Renovación"
+  },
+  {
+    nombre: "Julián Idrobo",
+    dorsal: 77,
+    posicion: "Extremo",
+    piernaHabil: "Derecha",
+    altura: "1.75m",
+    fechaNacimiento: "1993-01-09",
+    nacionalidad: "Colombiano",
+    foto: "img/jugadores/77-Julian-Idrobo.jpg",
+    estado: "Renovación"
+  },
+  {
+    nombre: "Kevin Montoya",
+    dorsal: 6,
+    posicion: "Lateral",
+    piernaHabil: "Izquierda",
+    altura: "1.70m",
+    fechaNacimiento: "2001-09-05",
+    nacionalidad: "Colombiano",
+    foto: "img/jugadores/6-Kevin-Montoya.jpg",
+    estado: "Renovación"
+  },
+  {
+    nombre: "Yerson Montoya",
+    dorsal: 73,
+    posicion: "Extremo",
+    piernaHabil: "Derecha",
+    altura: "1.80m",
+    fechaNacimiento: "2004-03-09",
+    nacionalidad: "Colombiano",
+    foto: "img/jugadores/73-Yerson-Montoya.jpg",
     estado: "Nuevo fichaje"
   },
   {
-    nombre: "Nombre Apellido",
-    dorsal: 7,
-    posicion: "Delantero",
-    piernaHabil: "Derecha",
-    altura: "1.74m",
-    fechaNacimiento: "2000-05-15",
-    nacionalidad: "Colombia",
-    foto: "img/jugadores/placeholder.jpg",
-    estado: ""
+    nombre: "Fernando Restrepo",
+    dorsal: 5,
+    posicion: "Central",
+    piernaHabil: "PENDIENTE",
+    altura: "PENDIENTE",
+    fechaNacimiento: "1993-10-31",
+    nacionalidad: "PENDIENTE",
+    foto: "img/jugadores/5-Fernando-Restrepo.jpg",
+    estado: "Renovación"
   },
   {
-    nombre: "Nombre Apellido",
-    dorsal: 5,
-    posicion: "Defensa",
+    // Ojo: hay 2 jugadores con el mismo nombre exacto (Jhon Anderson Valencia Díaz).
+    // Este es el de dorsal 12, emparejado con la fecha 2006 por su edad (20) en el Excel.
+    nombre: "Jhon Valencia",
+    dorsal: 12,
+    posicion: "Volante",
     piernaHabil: "Derecha",
-    altura: "1.88m",
-    fechaNacimiento: "1997-05-15",
-    nacionalidad: "España",
-    foto: "img/jugadores/placeholder.jpg",
-    estado: ""
+    altura: "1.77m",
+    fechaNacimiento: "2006-05-15",
+    nacionalidad: "Colombiano",
+    foto: "img/jugadores/12-Jhon-Valencia.jpg",
+    estado: "Renovación"
+  },
+  {
+    // El segundo "Jhon Anderson Valencia Díaz" (dorsal 16), fecha 1993 por descarte.
+    nombre: "Anderson Valencia",
+    dorsal: 16,
+    posicion: "Medio defensivo",
+    piernaHabil: "PENDIENTE",
+    altura: "PENDIENTE",
+    fechaNacimiento: "1993-07-12",
+    nacionalidad: "PENDIENTE",
+    foto: "img/jugadores/16-Anderson-Valencia.jpg",
+    estado: "Renovación"
+  },
+  {
+    nombre: "Brayan Valencia",
+    dorsal: 1,
+    posicion: "Portero",
+    piernaHabil: "Izquierda",
+    altura: "1.79m",
+    fechaNacimiento: "1990-11-05",
+    nacionalidad: "Colombiano",
+    foto: "img/jugadores/1-Brayan-Valencia.jpg",
+    estado: "Renovación"
+  },
+  {
+    nombre: "Alejandro Reinoso",
+    dorsal: 8,
+    posicion: "Volante",
+    piernaHabil: "Derecha",
+    altura: "1.80m",
+    fechaNacimiento: "2003-04-28",
+    nacionalidad: "Colombiano",
+    foto: "img/jugadores/8-Alejandro-Reinoso.jpg",
+    estado: "Nuevo Fichaje"
+  },
+  {
+    nombre: "Bryan Loachamin",
+    dorsal: 3,
+    posicion: "Central",
+    piernaHabil: "Derecha",
+    altura: "1.82m",
+    fechaNacimiento: "1997-07-29",
+    nacionalidad: "Ecuatoriano",
+    foto: "img/jugadores/3-Bryan-Loachamin.jpg",
+    estado: "Nuevo fichaje"
+  },
+  {
+    nombre: "Diego García",
+    dorsal: 99,
+    posicion: "Portero",
+    piernaHabil: "Izquierda",
+    altura: "1.72m",
+    fechaNacimiento: "1988-02-02",
+    nacionalidad: "Colombiano",
+    foto: "img/jugadores/99-Diego-Garcia.jpg",
+    estado: "Nuevo fichaje"
+  },
+  {
+    nombre: "Federico Meñe",
+    dorsal: 7,
+    posicion: "Delantero",
+    piernaHabil: "PENDIENTE",
+    altura: "PENDIENTE",
+    fechaNacimiento: "1990-08-15",
+    nacionalidad: "PENDIENTE",
+    foto: "img/jugadores/7-Federico-Mene.jpg",
+    estado: "Renovación"
+  },
+  {
+    nombre: "Manuel Marenco",
+    dorsal: 20,
+    posicion: "Extremo",
+    piernaHabil: "Derecha",
+    altura: "1.82m",
+    fechaNacimiento: "1999-01-29",
+    nacionalidad: "Colombiano",
+    foto: "img/jugadores/20-Manuel-Marenco.jpg",
+    estado: "Nuevo fichaje"
+  },
+  {
+    nombre: "Moisés Peláez",
+    dorsal: 15,
+    posicion: "Extremo",
+    piernaHabil: "Derecha",
+    altura: "1.72m",
+    fechaNacimiento: "2001-07-06",
+    nacionalidad: "Español",
+    foto: "img/jugadores/15-Moises-Pelaez.jpg",
+    estado: "Nuevo fichaje"
+  },
+  {
+    nombre: "Santiago Londoño",
+    dorsal: 29,
+    posicion: "Volante central",
+    piernaHabil: "Izquierda",
+    altura: "1.80m",
+    fechaNacimiento: "1992-02-19",
+    nacionalidad: "Colombiano",
+    foto: "img/jugadores/29-Santiago-Londono.jpg",
+    estado: "Renovación"
+  },
+  {
+    nombre: "Brian Lozada",
+    dorsal: 14,
+    posicion: "Central / Lateral",
+    piernaHabil: "Derecha",
+    altura: "1.77m",
+    fechaNacimiento: "2006-08-21",
+    nacionalidad: "Colombiano",
+    foto: "img/jugadores/14-Brian-Lozada.jpg",
+    estado: "Nuevo fichaje"
+  },
+  {
+    nombre: "Keller Zambrano",
+    dorsal: 11,
+    posicion: "Volante",
+    piernaHabil: "PENDIENTE",
+    altura: "PENDIENTE",
+    fechaNacimiento: "2007-02-02",
+    nacionalidad: "PENDIENTE",
+    foto: "img/jugadores/11-Keller-Zambrano.jpg",
+    estado: "Nuevo fichaje"
+  },
+  {
+    nombre: "Leonardo Cundumi",
+    dorsal: 17,
+    posicion: "Delantero",
+    piernaHabil: "Derecha",
+    altura: "1.73m",
+    fechaNacimiento: "2000-01-10",
+    nacionalidad: "Colombiano",
+    foto: "img/jugadores/17-Leonardo-Cundumi.jpg",
+    estado: "Nuevo fichaje"
+  },
+  {
+    // Nombre sin confirmar del todo (ver nota aparte). Sin fecha de nacimiento real
+    // (no aparece en el PDF de la Federación) — fecha placeholder, hay que corregirla.
+    nombre: "Cheikh Ladijane",
+    dorsal: 13,
+    posicion: "Volante",
+    piernaHabil: "Derecha",
+    altura: "1.75m",
+    fechaNacimiento: "2004-01-01",
+    nacionalidad: "Senegalés",
+    foto: "img/jugadores/13-Cheikh-Ladijane.jpg",
+    estado: "Nuevo fichaje"
   }
-  // ⬇️ Copia un bloque de arriba y pégalo aquí para añadir otro jugador
 ];
 
 
