@@ -417,16 +417,17 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
 
 .player-card__badge {
   position: absolute;
-  top: 12px;
-  left: 12px;
+  top: 8px;
+  left: 8px;
   background: var(--gold);
   color: var(--navy-deep);
-  font-size: 0.7rem;
+  font-size: 0.56rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
-  padding: 5px 10px;
-  border-radius: 6px;
+  letter-spacing: 0.03em;
+  padding: 3px 7px;
+  border-radius: 5px;
+  line-height: 1.2;
 }
 
 .player-card__crest {
@@ -756,7 +757,8 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
   border-radius: 18px;
   overflow: hidden;
   background: var(--navy);
-  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .kit-card__img-wrap {
@@ -774,23 +776,16 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
 .kit-card:hover .kit-card__img { transform: scale(1.045); }
 
 .kit-card__label {
-  position: absolute;
-  bottom: 0; left: 0; right: 0;
-  padding: 24px 22px;
-  background: linear-gradient(0deg, rgba(7,20,51,0.92) 0%, transparent 100%);
+  padding: 16px 20px;
+  text-align: center;
 }
 
 .kit-card__title {
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
+  letter-spacing: 0.02em;
   color: var(--white);
-}
-
-.kit-card__season {
-  font-size: 0.85rem;
-  color: var(--gold-soft);
-  margin-top: 2px;
 }
 
 /* ============================================================
@@ -871,9 +866,8 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
 
 @media (max-width: 420px) {
   .kits { gap: 10px; }
-  .kit-card__label { padding: 14px 12px; }
-  .kit-card__title { font-size: 1.05rem; }
-  .kit-card__season { font-size: 0.72rem; }
+  .kit-card__label { padding: 12px 10px; }
+  .kit-card__title { font-size: 1.02rem; }
 }
 
 @media (max-width: 720px) {
@@ -885,9 +879,9 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
     background: var(--navy-deep);
     flex-direction: column;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 6px;
-    padding: 32px;
+    padding: 100px 32px 32px;
     transform: translateX(100%);
     transition: transform var(--transition);
     box-shadow: -10px 0 40px rgba(0,0,0,0.35);

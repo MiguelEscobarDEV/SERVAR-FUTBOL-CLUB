@@ -76,7 +76,7 @@ const jugadores = [
     fechaNacimiento: "1990-01-01",
     nacionalidad: "Colombiano",
     foto: "img/jugadores/JULIAN-SANCLEMENTE.JPG",
-    estado: ""
+    estado: "D. Técnico"
   },
   {
     nombre: "Juan Bocanegra",
@@ -431,13 +431,11 @@ const campoLocal = {
 const equipacion = {
   principal: {
     imagen: "img/equipacion/principal.jpg",
-    titulo: "Equipación Principal",
-    temporada: "Temporada 2026/2027"
+    titulo: "Principal"
   },
   alternativa: {
     imagen: "img/equipacion/alternativa.jpg",
-    titulo: "Equipación Alternativa",
-    temporada: "Temporada 2026/2027"
+    titulo: "Alternativa"
   }
 };
 

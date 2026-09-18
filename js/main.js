@@ -322,7 +322,6 @@ function renderEquipacion() {
       </div>
       <div class="kit-card__label">
         <div class="kit-card__title">${kit.titulo}</div>
-        <div class="kit-card__season">${kit.temporada}</div>
       </div>
     </div>
   `).join('');
