@@ -74,7 +74,7 @@ const jugadores = [
     piernaHabil: "Izquierda",
     altura: "1.78m",
     fechaNacimiento: "1990-01-01",
-    nacionalidad: "Colombiano",
+    nacionalidad: "Colombia",
     foto: "img/jugadores/JULIAN-SANCLEMENTE.JPG",
     estado: "D. Técnico"
   },
@@ -85,7 +85,7 @@ const jugadores = [
     piernaHabil: "Izquierda",
     altura: "1.75m",
     fechaNacimiento: "1987-01-27",
-    nacionalidad: "Colombiano",
+    nacionalidad: "Colombia",
     foto: "img/jugadores/9-Juan-Bocanegra.jpg",
     estado: "Renovación"
   },
@@ -96,7 +96,7 @@ const jugadores = [
     piernaHabil: "Izquierda",
     altura: "1.67m",
     fechaNacimiento: "1993-07-03",
-    nacionalidad: "Colombiano",
+    nacionalidad: "Colombia",
     foto: "img/jugadores/10-Miguel-Escobar.jpg",
     estado: "Renovación"
   },
@@ -107,7 +107,7 @@ const jugadores = [
     piernaHabil: "Izquierda",
     altura: "1.75m",
     fechaNacimiento: "2001-05-19",
-    nacionalidad: "Colombiano",
+    nacionalidad: "Colombia",
     foto: "img/jugadores/19-Kevin-Escobar.jpg",
     estado: "Renovación"
   },
@@ -118,7 +118,7 @@ const jugadores = [
     piernaHabil: "Derecha",
     altura: "1.80m",
     fechaNacimiento: "2005-04-18",
-    nacionalidad: "Venezolano",
+    nacionalidad: "Venezuela",
     foto: "img/jugadores/4-Jose-Gimenez.jpg",
     estado: "Renovación"
   },
@@ -129,18 +129,18 @@ const jugadores = [
     piernaHabil: "Derecha",
     altura: "1.75m",
     fechaNacimiento: "1993-01-09",
-    nacionalidad: "Colombiano",
+    nacionalidad: "Colombia",
     foto: "img/jugadores/77-Julian-Idrobo.jpg",
     estado: "Renovación"
   },
   {
     nombre: "Kevin Montoya",
     dorsal: 6,
-    posicion: "Lateral",
+    posicion: "Extremo",
     piernaHabil: "Izquierda",
     altura: "1.70m",
     fechaNacimiento: "2001-09-05",
-    nacionalidad: "Colombiano",
+    nacionalidad: "Colombia",
     foto: "img/jugadores/6-Kevin-Montoya.jpg",
     estado: "Renovación"
   },
@@ -151,7 +151,7 @@ const jugadores = [
     piernaHabil: "Derecha",
     altura: "1.80m",
     fechaNacimiento: "2004-03-09",
-    nacionalidad: "Colombiano",
+    nacionalidad: "Colombia",
     foto: "img/jugadores/73-Yerson-Montoya.jpg",
     estado: "Nuevo fichaje"
   },
@@ -171,11 +171,11 @@ const jugadores = [
     // Este es el de dorsal 12, emparejado con la fecha 2006 por su edad (20) en el Excel.
     nombre: "Jhon Valencia",
     dorsal: 12,
-    posicion: "Volante",
+    posicion: "Medio",
     piernaHabil: "Derecha",
     altura: "1.77m",
     fechaNacimiento: "2006-05-15",
-    nacionalidad: "Colombiano",
+    nacionalidad: "Colombia",
     foto: "img/jugadores/12-Jhon-Valencia.jpg",
     estado: "Renovación"
   },
@@ -183,7 +183,7 @@ const jugadores = [
     // El segundo "Jhon Anderson Valencia Díaz" (dorsal 16), fecha 1993 por descarte.
     nombre: "Anderson Valencia",
     dorsal: 16,
-    posicion: "Medio defensivo",
+    posicion: "Medio",
     piernaHabil: "PENDIENTE",
     altura: "PENDIENTE",
     fechaNacimiento: "1993-07-12",
@@ -198,18 +198,18 @@ const jugadores = [
     piernaHabil: "Izquierda",
     altura: "1.79m",
     fechaNacimiento: "1990-11-05",
-    nacionalidad: "Colombiano",
+    nacionalidad: "Colombia",
     foto: "img/jugadores/1-Brayan-Valencia.jpg",
     estado: "Renovación"
   },
   {
     nombre: "Alejandro Reinoso",
     dorsal: 8,
-    posicion: "Volante",
+    posicion: "Medio",
     piernaHabil: "Derecha",
     altura: "1.80m",
     fechaNacimiento: "2003-04-28",
-    nacionalidad: "Colombiano",
+    nacionalidad: "Colombia",
     foto: "img/jugadores/8-Alejandro-Reinoso.jpg",
     estado: "Nuevo Fichaje"
   },
@@ -220,7 +220,7 @@ const jugadores = [
     piernaHabil: "Derecha",
     altura: "1.82m",
     fechaNacimiento: "1997-07-29",
-    nacionalidad: "Ecuatoriano",
+    nacionalidad: "Ecuador",
     foto: "img/jugadores/3-Bryan-Loachamin.jpg",
     estado: "Nuevo fichaje"
   },
@@ -231,7 +231,7 @@ const jugadores = [
     piernaHabil: "Izquierda",
     altura: "1.72m",
     fechaNacimiento: "1988-02-02",
-    nacionalidad: "Colombiano",
+    nacionalidad: "Colombia",
     foto: "img/jugadores/99-Diego-Garcia.jpg",
     estado: "Nuevo fichaje"
   },
@@ -253,7 +253,7 @@ const jugadores = [
     piernaHabil: "Derecha",
     altura: "1.82m",
     fechaNacimiento: "1999-01-29",
-    nacionalidad: "Colombiano",
+    nacionalidad: "Colombia",
     foto: "img/jugadores/20-Manuel-Marenco.jpg",
     estado: "Nuevo fichaje"
   },
@@ -264,36 +264,36 @@ const jugadores = [
     piernaHabil: "Derecha",
     altura: "1.72m",
     fechaNacimiento: "2001-07-06",
-    nacionalidad: "Español",
+    nacionalidad: "España",
     foto: "img/jugadores/15-Moises-Pelaez.jpg",
     estado: "Nuevo fichaje"
   },
   {
     nombre: "Santiago Londoño",
     dorsal: 29,
-    posicion: "Volante central",
+    posicion: "Medio",
     piernaHabil: "Izquierda",
     altura: "1.80m",
     fechaNacimiento: "1992-02-19",
-    nacionalidad: "Colombiano",
+    nacionalidad: "Colombia",
     foto: "img/jugadores/29-Santiago-Londono.jpg",
     estado: "Renovación"
   },
   {
     nombre: "Brian Lozada",
     dorsal: 14,
-    posicion: "Central / Lateral",
+    posicion: "Lateral",
     piernaHabil: "Derecha",
     altura: "1.77m",
     fechaNacimiento: "2006-08-21",
-    nacionalidad: "Colombiano",
+    nacionalidad: "Colombia",
     foto: "img/jugadores/14-Brian-Lozada.jpg",
     estado: "Nuevo fichaje"
   },
   {
     nombre: "Keller Zambrano",
     dorsal: 11,
-    posicion: "Volante",
+    posicion: "Medio",
     piernaHabil: "PENDIENTE",
     altura: "PENDIENTE",
     fechaNacimiento: "2007-02-02",
@@ -308,7 +308,7 @@ const jugadores = [
     piernaHabil: "Derecha",
     altura: "1.73m",
     fechaNacimiento: "2000-01-10",
-    nacionalidad: "Colombiano",
+    nacionalidad: "Colombia",
     foto: "img/jugadores/17-Leonardo-Cundumi.jpg",
     estado: "Nuevo fichaje"
   },
@@ -317,11 +317,11 @@ const jugadores = [
     // (no aparece en el PDF de la Federación) — fecha placeholder, hay que corregirla.
     nombre: "Cheikh Ladijane",
     dorsal: 13,
-    posicion: "Volante",
+    posicion: "Extremo",
     piernaHabil: "Derecha",
     altura: "1.75m",
     fechaNacimiento: "2004-01-01",
-    nacionalidad: "Senegalés",
+    nacionalidad: "Senegal",
     foto: "img/jugadores/13-Cheikh-Ladijane.jpg",
     estado: "Nuevo fichaje"
   }
@@ -364,7 +364,7 @@ const jugadores = [
    ============================================================ */
 
 const calendario = [
-  { fecha: "2026-09-20", hora: "", rival: "Aktimel R.C.F.",              lugar: "Local",     resultado: null }, // Jornada 1
+  { fecha: "2026-09-20", hora: "", rival: "Aktimel R.C.F.",              lugar: "Local",     resultado: "12 - 1" }, // Jornada 1
   { fecha: "2026-09-27", hora: "", rival: "Valdecanal C.D.",             lugar: "Visitante", resultado: null }, // Jornada 2
   { fecha: "2026-10-04", hora: "", rival: "Atlético Aragón 2025",        lugar: "Local",     resultado: null }, // Jornada 3
   { fecha: "2026-10-18", hora: "", rival: "Once Amigos F.C.A.",          lugar: "Visitante", resultado: null }, // Jornada 4
@@ -417,7 +417,21 @@ const calendario = [
 const campoLocal = {
   nombre: "Campos de la Federación Aragonesa de Fútbol",
   direccion: "Zaragoza — Campus del Actur",
-  mapsUrl: "https://maps.app.goo.gl/mL5D5DiM55LQYg5g9?g_st=ic"
+  mapsUrl: "https://maps.app.goo.gl/EJsUWX5ganX5jNxR7?g_st=ic"
+};
+
+
+/* ============================================================
+   REDES SOCIALES
+   ============================================================
+   Se usa en el enlace "Consultar en Instagram" que aparece en
+   los partidos de Visitante (ya que no tenemos la ubicación del
+   campo rival). El icono de Instagram del footer es un enlace
+   aparte, fijo en index.html.
+   ============================================================ */
+
+const redesSociales = {
+  instagram: "https://www.instagram.com/servarfc/?hl=es"
 };
 
 
