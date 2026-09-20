@@ -105,6 +105,14 @@ function renderJugadores() {
       ? `<span class="player-card__badge">${jugador.estado}</span>`
       : '';
 
+    // El cuerpo técnico no usa número de camiseta (dorsal numérico) — a ellos
+    // no les mostramos el "#" ni la fila de "Pierna hábil".
+    const tieneDorsal = typeof jugador.dorsal === 'number';
+    const dorsalHTML = tieneDorsal ? `<span>#${jugador.dorsal}</span>` : '';
+    const piernaHabilHTML = tieneDorsal
+      ? `<div class="player-card__stat"><span>Pierna hábil</span><span>${jugador.piernaHabil}</span></div>`
+      : '';
+
     card.innerHTML = `
       <div class="player-card__inner">
         <div class="player-card__face player-card__front">
@@ -125,7 +133,7 @@ function renderJugadores() {
             <div class="player-card__name">${jugador.nombre}</div>
             <div class="player-card__meta">
               <span>${jugador.posicion}</span>
-              <span>#${jugador.dorsal}</span>
+              ${dorsalHTML}
             </div>
           </div>
         </div>
@@ -133,7 +141,7 @@ function renderJugadores() {
           <div class="player-card__back-name">${jugador.nombre}</div>
           <div class="player-card__stat"><span>Posición</span><span>${jugador.posicion}</span></div>
           <div class="player-card__stat"><span>Altura</span><span>${jugador.altura}</span></div>
-          <div class="player-card__stat"><span>Pierna hábil</span><span>${jugador.piernaHabil}</span></div>
+          ${piernaHabilHTML}
           <div class="player-card__stat"><span>Edad</span><span>${calcularEdad(jugador.fechaNacimiento)} años</span></div>
           <div class="player-card__stat"><span>País</span><span>${jugador.nacionalidad}</span></div>
           <div class="player-card__back-hint">Toca de nuevo para volver</div>
@@ -208,7 +216,7 @@ function renderCalendario() {
          </a>`;
     } else if (partido.lugar !== 'Local' && typeof redesSociales !== 'undefined') {
       enlaceCampo = `<a class="match-card__venue" href="${redesSociales.instagram}" target="_blank" rel="noopener">
-           <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.8"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor"/></svg>
+           <svg viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="9.5" r="2.3" stroke="currentColor" stroke-width="1.8"/></svg>
            Ver en Instagram
          </a>`;
     }

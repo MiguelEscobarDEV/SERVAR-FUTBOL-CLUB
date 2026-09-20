@@ -68,26 +68,27 @@
 const jugadores = [
   {
     // TÉCNICO — no es jugador, no tiene dorsal. Reemplaza el nombre cuando lo tengas.
+    nombre: "Jhon Hayder",
+    dorsal: "",
+    posicion: "Director T.",
+    piernaHabil: "Izquierda",
+    altura: "1.69m",
+    fechaNacimiento: "1986-02-11",
+    nacionalidad: "Colombia",
+    foto: "img/jugadores/Jhon-Hayder.jpg",
+    estado: "Director Tecnico"
+  },
+  {
+    // TÉCNICO — no es jugador, no tiene dorsal. Reemplaza el nombre cuando lo tengas.
     nombre: "Julián Sanclemente",
-    dorsal: "DT",
+    dorsal: "",
     posicion: "Entrenador",
     piernaHabil: "Izquierda",
     altura: "1.78m",
     fechaNacimiento: "1990-01-01",
     nacionalidad: "Colombia",
-    foto: "img/jugadores/JULIAN-SANCLEMENTE.JPG",
-    estado: "D. Técnico"
-  },
-  {
-    nombre: "Juan Bocanegra",
-    dorsal: 9,
-    posicion: "Delantero",
-    piernaHabil: "Izquierda",
-    altura: "1.75m",
-    fechaNacimiento: "1987-01-27",
-    nacionalidad: "Colombia",
-    foto: "img/jugadores/9-Juan-Bocanegra.jpg",
-    estado: "Renovación"
+    foto: "img/jugadores/Julian-Sanclemente.jpg",
+    estado: "Preparador Físico"
   },
   {
     nombre: "Miguel Escobar",
@@ -98,6 +99,17 @@ const jugadores = [
     fechaNacimiento: "1993-07-03",
     nacionalidad: "Colombia",
     foto: "img/jugadores/10-Miguel-Escobar.jpg",
+    estado: "Renovación"
+  },
+  {
+    nombre: "Juan Bocanegra",
+    dorsal: 9,
+    posicion: "Delantero",
+    piernaHabil: "Izquierda",
+    altura: "1.75m",
+    fechaNacimiento: "1987-01-27",
+    nacionalidad: "Colombia",
+    foto: "img/jugadores/9-Juan-Bocanegra.jpg",
     estado: "Renovación"
   },
   {
