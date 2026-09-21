@@ -451,36 +451,6 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
   line-height: 1;
 }
 
-.player-card__hint {
-  position: absolute;
-  bottom: 12px;
-  left: 12px;
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  background: rgba(7, 20, 51, 0.55);
-  backdrop-filter: blur(3px);
-  border: 1px solid rgba(242,194,48,0.4);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--gold);
-  animation: hintPulse 2.6s ease-in-out infinite;
-  transition: transform var(--transition), background var(--transition);
-}
-
-.player-card__hint svg { width: 17px; height: 17px; }
-
-.player-card:hover .player-card__hint {
-  transform: scale(1.12);
-  background: rgba(7, 20, 51, 0.75);
-}
-
-@keyframes hintPulse {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(242,194,48,0.35); }
-  50% { box-shadow: 0 0 0 7px rgba(242,194,48,0); }
-}
-
 .player-card__info {
   padding: 14px 16px 16px;
 }
@@ -499,6 +469,13 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
   color: var(--slate);
   display: flex;
   justify-content: space-between;
+}
+
+.player-card__tap-hint {
+  margin-top: 8px;
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.34);
+  letter-spacing: 0.01em;
 }
 
 /* --- Reverso --- */

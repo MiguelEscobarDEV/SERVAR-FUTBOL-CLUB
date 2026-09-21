@@ -122,12 +122,6 @@ function renderJugadores() {
             ${badgeHTML}
             <img class="player-card__crest" src="img/logo/escudo.png" alt="">
             <span class="player-card__number">${jugador.dorsal}</span>
-            <span class="player-card__hint" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none">
-                <path d="M4 12a8 8 0 0 1 13.66-5.66M20 12a8 8 0 0 1-13.66 5.66" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                <path d="M17 3v4h-4M7 21v-4h4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </span>
           </div>
           <div class="player-card__info">
             <div class="player-card__name">${jugador.nombre}</div>
@@ -135,6 +129,7 @@ function renderJugadores() {
               <span>${jugador.posicion}</span>
               ${dorsalHTML}
             </div>
+            <div class="player-card__tap-hint">Toca para más información</div>
           </div>
         </div>
         <div class="player-card__face player-card__back">

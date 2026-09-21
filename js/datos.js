@@ -85,7 +85,7 @@ const jugadores = [
     posicion: "Entrenador",
     piernaHabil: "Izquierda",
     altura: "1.78m",
-    fechaNacimiento: "1990-01-01",
+    fechaNacimiento: "1999-07-07",
     nacionalidad: "Colombia",
     foto: "img/jugadores/Julian-Sanclemente.jpg",
     estado: "Preparador Físico"
@@ -377,7 +377,7 @@ const jugadores = [
 
 const calendario = [
   { fecha: "2026-09-20", hora: "", rival: "Aktimel R.C.F.",              lugar: "Local",     resultado: "12 - 1" }, // Jornada 1
-  { fecha: "2026-09-27", hora: "", rival: "Valdecanal C.D.",             lugar: "Visitante", resultado: null }, // Jornada 2
+  { fecha: "2026-09-26", hora: "", rival: "Valdecanal C.D.",             lugar: "Visitante", resultado: null }, // Jornada 2
   { fecha: "2026-10-04", hora: "", rival: "Atlético Aragón 2025",        lugar: "Local",     resultado: null }, // Jornada 3
   { fecha: "2026-10-18", hora: "", rival: "Once Amigos F.C.A.",          lugar: "Visitante", resultado: null }, // Jornada 4
   { fecha: "2026-10-25", hora: "", rival: "Submarino C.F.",              lugar: "Local",     resultado: null }, // Jornada 5
@@ -397,7 +397,7 @@ const calendario = [
   { fecha: "2027-02-28", hora: "", rival: "Fleta C.D. \"C\"",            lugar: "Local",     resultado: null }, // Jornada 19
   { fecha: "2027-03-14", hora: "", rival: "Peña Atlética La Muela Club", lugar: "Visitante", resultado: null }, // Jornada 20
   { fecha: "2027-03-21", hora: "", rival: "Paulinos Futbol Club \"C\"",  lugar: "Local",     resultado: null }, // Jornada 21
-  { fecha: "2027-04-04", hora: "", rival: "Real Peñón C.D.",             lugar: "Visitante", resultado: null }, // Jornada 22
+  { fecha: "2027-04-03", hora: "", rival: "Real Peñón C.D.",             lugar: "Visitante", resultado: null }, // Jornada 22
   { fecha: "2027-04-11", hora: "", rival: "Inter-Z F.C. \"I\"",          lugar: "Local",     resultado: null }, // Jornada 23
   { fecha: "2027-04-18", hora: "", rival: "Atlético Quarte",             lugar: "Visitante", resultado: null }, // Jornada 24
   { fecha: "2027-05-02", hora: "", rival: "Pina C.D.",                   lugar: "Local",     resultado: null }, // Jornada 25
