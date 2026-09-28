@@ -1,0 +1,8 @@
+# Configuración de caché para Netlify.
+# Las imágenes se guardan 1 día en el navegador del visitante.
+# Si reemplazas una foto con el mismo nombre, quien ya visitó el sitio
+# puede seguir viendo la anterior hasta 24 horas.
+# HTML, CSS y JS no se tocan: siguen actualizándose al instante.
+
+/img/*
+  Cache-Control: public, max-age=86400

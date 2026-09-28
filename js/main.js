@@ -94,12 +94,15 @@ function renderJugadores() {
   const track = document.getElementById('jugadoresTrack');
   if (!track || typeof jugadores === 'undefined') return;
 
-  jugadores.forEach(jugador => {
+  jugadores.forEach((jugador, i) => {
     const card = document.createElement('div');
     card.className = 'player-card';
     card.setAttribute('role', 'button');
     card.setAttribute('tabindex', '0');
-    card.setAttribute('aria-label', `Ver ficha de ${jugador.nombre}`);
+    card.setAttribute('aria-pressed', 'false');
+    // El nombre accesible sale del nombre del jugador (funciona aunque la
+    // tarjeta esté fuera de la zona visible y su interior oculto).
+    card.setAttribute('aria-labelledby', `jugador-${i}-nombre`);
 
     const badgeHTML = jugador.estado
       ? `<span class="player-card__badge">${jugador.estado}</span>`
@@ -117,14 +120,14 @@ function renderJugadores() {
       <div class="player-card__inner">
         <div class="player-card__face player-card__front">
           <div class="player-card__photo-wrap">
-            <img class="player-card__photo" src="${jugador.foto}" alt="Foto de ${jugador.nombre}" loading="lazy"
+            <img class="player-card__photo" src="${jugador.foto}" alt="Foto de ${jugador.nombre}" loading="lazy" decoding="async" width="900" height="1200"
                  onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22260%22 height=%22280%22%3E%3Crect width=%22260%22 height=%22280%22 fill=%22%231D3A78%22/%3E%3C/svg%3E'">
             ${badgeHTML}
             <img class="player-card__crest" src="img/logo/escudo.png" alt="">
             <span class="player-card__number">${jugador.dorsal}</span>
           </div>
           <div class="player-card__info">
-            <div class="player-card__name">${jugador.nombre}</div>
+            <div class="player-card__name" id="jugador-${i}-nombre">${jugador.nombre}</div>
             <div class="player-card__meta">
               <span>${jugador.posicion}</span>
               ${dorsalHTML}
@@ -132,7 +135,7 @@ function renderJugadores() {
             <div class="player-card__tap-hint">Toca para más información</div>
           </div>
         </div>
-        <div class="player-card__face player-card__back">
+        <div class="player-card__face player-card__back" id="jugador-${i}-ficha" aria-hidden="true">
           <div class="player-card__back-name">${jugador.nombre}</div>
           <div class="player-card__stat"><span>Posición</span><span>${jugador.posicion}</span></div>
           <div class="player-card__stat"><span>Altura</span><span>${jugador.altura}</span></div>
@@ -144,7 +147,18 @@ function renderJugadores() {
       </div>
     `;
 
-    const flip = () => card.classList.toggle('is-flipped');
+    // El lector de pantalla solo lee la cara que está a la vista
+    const front = card.querySelector('.player-card__front');
+    const back = card.querySelector('.player-card__back');
+    const flip = () => {
+      const volteada = card.classList.toggle('is-flipped');
+      card.setAttribute('aria-pressed', String(volteada));
+      front.setAttribute('aria-hidden', String(volteada));
+      back.setAttribute('aria-hidden', String(!volteada));
+      // Al voltearla, el lector de pantalla anuncia la ficha como descripción
+      if (volteada) card.setAttribute('aria-describedby', back.id);
+      else card.removeAttribute('aria-describedby');
+    };
     card.addEventListener('click', flip);
     card.addEventListener('keydown', (e) => {
       if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); flip(); }
@@ -152,6 +166,16 @@ function renderJugadores() {
 
     track.appendChild(card);
   });
+
+  // Solo se renderizan las tarjetas cercanas a la zona visible del carrusel
+  // (un ancho de carrusel a cada lado). Las 24 tarjetas 3D a la vez ocupaban
+  // ~80 capas de GPU, lo que en iPhone retrasaba la respuesta al tocar.
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => e.target.classList.toggle('is-offscreen', !e.isIntersecting));
+    }, { root: track, rootMargin: '0px 100%' });
+    track.querySelectorAll('.player-card').forEach(c => observer.observe(c));
+  }
 
   wireCarouselArrows(
     track,
@@ -326,7 +350,7 @@ function renderEquipacion() {
   contenedor.innerHTML = kits.map(kit => `
     <div class="kit-card">
       <div class="kit-card__img-wrap">
-        <img class="kit-card__img" src="${kit.imagen}" alt="${kit.titulo}" loading="lazy"
+        <img class="kit-card__img" src="${kit.imagen}" alt="${kit.titulo}" loading="lazy" decoding="async" width="900" height="1350"
              onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22%3E%3Crect width=%22400%22 height=%22500%22 fill=%22%2312285C%22/%3E%3C/svg%3E'">
       </div>
       <div class="kit-card__label">

@@ -48,6 +48,9 @@ a { color: inherit; text-decoration: none; }
 
 button { font: inherit; cursor: pointer; border: none; background: none; color: inherit; }
 
+/* Sin espera de doble toque (zoom) en elementos tocables */
+a, button, .player-card { touch-action: manipulation; }
+
 :focus-visible {
   outline: 3px solid var(--gold);
   outline-offset: 3px;
@@ -82,10 +85,15 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
   justify-content: space-between;
 }
 
+/* Las áreas táctiles se agrandan con padding/borde transparente + margen
+   negativo (no con ::after): así el tamaño visual y el layout no cambian.
+   Con pseudo-elementos, WebKit tardaba un frame más en responder al toque. */
 .header__brand {
   display: flex;
   align-items: center;
   gap: 12px;
+  padding: 3px;
+  margin: -3px;
 }
 
 .header__crest { width: 42px; height: 42px; object-fit: contain; }
@@ -109,15 +117,15 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
   transition: color var(--transition), background var(--transition);
 }
 
-.nav__link:hover { color: var(--white); background: rgba(255,255,255,0.06); }
-
 .menu-toggle {
   display: none;
   flex-direction: column;
   justify-content: center;
   gap: 5px;
-  width: 42px;
-  height: 42px;
+  width: 48px;
+  height: 48px;
+  padding: 3px;
+  margin: -3px;
   position: relative;
   z-index: 96;
 }
@@ -351,11 +359,10 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
 }
 
 .section:not(.section--dark) .carousel__arrow {
-  background: var(--navy);
+  background-color: var(--navy);
   color: var(--gold);
 }
 
-.carousel__arrow:hover { background: var(--navy-light); transform: scale(1.06); }
 .carousel__arrow:active { transform: scale(0.96); }
 .carousel__arrow svg { width: 22px; height: 22px; }
 
@@ -385,6 +392,10 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
 }
 
 .player-card.is-flipped .player-card__inner { transform: rotateY(180deg); }
+
+/* Tarjetas lejos de la zona visible del carrusel: no se renderizan, así no
+   ocupan capas de GPU (en iPhone eso retrasaba la respuesta al tocar). */
+.player-card.is-offscreen .player-card__inner { display: none; }
 
 .player-card__face {
   position: absolute;
@@ -512,7 +523,7 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
 .player-card__back-hint {
   margin-top: auto;
   font-size: 0.75rem;
-  color: #9AA3BD;
+  color: #6B7590;
   text-align: center;
 }
 
@@ -588,10 +599,11 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
   color: var(--navy-mid);
   border-top: 1px dashed rgba(10,27,66,0.14);
   padding-top: 10px;
+  padding-bottom: 14px;   /* área táctil de 44px de alto... */
+  margin-bottom: -14px;   /* ...sin mover nada */
 }
 
 .match-card__venue svg { width: 13px; height: 13px; flex-shrink: 0; }
-.match-card__venue:hover { color: var(--navy); text-decoration: underline; }
 
 /* ============================================================
    TARJETA DE NUESTRO CAMPO
@@ -659,7 +671,6 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
   transition: background var(--transition), transform var(--transition);
 }
 
-.venue__btn:hover { background: var(--navy-mid); transform: translateY(-1px); }
 .venue__btn svg { width: 16px; height: 16px; }
 
 /* ============================================================
@@ -751,8 +762,6 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
   transition: transform 500ms ease;
 }
 
-.kit-card:hover .kit-card__img { transform: scale(1.045); }
-
 .kit-card__label {
   padding: 16px 20px;
   text-align: center;
@@ -793,15 +802,17 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
 }
 
 .footer__icon {
-  width: 40px; height: 40px;
+  width: 48px; height: 48px;        /* círculo visible de 40px + borde transparente */
+  border: 4px solid transparent;
+  margin: -4px;
   border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
   background: rgba(255,255,255,0.06);
+  background-clip: padding-box;
   color: var(--slate);
   transition: background var(--transition), color var(--transition);
 }
 
-.footer__icon:hover { background: var(--gold); color: var(--navy-deep); }
 .footer__icon svg { width: 18px; height: 18px; }
 
 .footer__copy {
@@ -818,20 +829,33 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
   display: inline-flex;
   align-items: center;
   gap: 6px;
+  padding: 13px 0;
+  margin: -13px 0;
   color: var(--slate-dim);
   opacity: 0.85;
   transition: color var(--transition), opacity var(--transition);
-}
-
-.footer__credit a:hover {
-  color: var(--gold);
-  opacity: 1;
 }
 
 .footer__credit svg {
   width: 13px;
   height: 13px;
   flex-shrink: 0;
+}
+
+/* ============================================================
+   HOVER — solo con mouse. En pantallas táctiles (iOS) el :hover
+   se queda "pegado" tras tocar y puede retrasar el clic.
+   ============================================================ */
+
+@media (hover: hover) and (pointer: fine) {
+  .nav__link:hover { color: var(--white); background: rgba(255,255,255,0.06); }
+  .carousel__arrow:hover { background-color: var(--navy-light); transform: scale(1.06); }
+  .carousel__arrow:active { transform: scale(0.96); } /* debe ir después de :hover */
+  .match-card__venue:hover { color: var(--navy); text-decoration: underline; }
+  .venue__btn:hover { background: var(--navy-mid); transform: translateY(-1px); }
+  .kit-card:hover .kit-card__img { transform: scale(1.045); }
+  .footer__icon:hover { background-color: var(--gold); color: var(--navy-deep); }
+  .footer__credit a:hover { color: var(--gold); opacity: 1; }
 }
 
 /* ============================================================
@@ -874,7 +898,15 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
 
   .section { padding: 72px 20px; }
 
-  .carousel__arrow { width: 40px; height: 40px; }
+  /* Círculo visible de 40px, área táctil de 48px (borde transparente) */
+  .carousel__arrow {
+    width: 48px;
+    height: 48px;
+    border: 4px solid transparent;
+    background-clip: padding-box;
+    margin: -4px;
+  }
+  .carousel__arrow:focus-visible { outline-offset: -1px; }
   .carousel__arrow svg { width: 18px; height: 18px; }
 
   .player-card { width: 220px; height: 340px; }
