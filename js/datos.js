@@ -171,10 +171,10 @@ const jugadores = [
     nombre: "Fernando Restrepo",
     dorsal: 5,
     posicion: "Central",
-    piernaHabil: "PENDIENTE",
-    altura: "PENDIENTE",
+    piernaHabil: "Derecha",
+    altura: "1.70m",
     fechaNacimiento: "1993-10-31",
-    nacionalidad: "PENDIENTE",
+    nacionalidad: "Colombia",
     foto: "img/jugadores/5-Fernando-Restrepo.jpg",
     estado: "Renovación"
   },
@@ -195,11 +195,11 @@ const jugadores = [
     // El segundo "Jhon Anderson Valencia Díaz" (dorsal 16), fecha 1993 por descarte.
     nombre: "Anderson Valencia",
     dorsal: 16,
-    posicion: "Medio",
-    piernaHabil: "PENDIENTE",
-    altura: "PENDIENTE",
+    posicion: "Defensa",
+    piernaHabil: "Derecha",
+    altura: "1.85m",
     fechaNacimiento: "1993-07-12",
-    nacionalidad: "PENDIENTE",
+    nacionalidad: "Colombia",
     foto: "img/jugadores/16-Anderson-Valencia.jpg",
     estado: "Renovación"
   },
@@ -251,10 +251,10 @@ const jugadores = [
     nombre: "Federico Meñe",
     dorsal: 7,
     posicion: "Delantero",
-    piernaHabil: "PENDIENTE",
-    altura: "PENDIENTE",
+    piernaHabil: "Derecha",
+    altura: "1.70m",
     fechaNacimiento: "1990-08-15",
-    nacionalidad: "PENDIENTE",
+    nacionalidad: "Guinea Ecuatorial",
     foto: "img/jugadores/7-Federico-Mene.jpg",
     estado: "Renovación"
   },
@@ -306,10 +306,10 @@ const jugadores = [
     nombre: "Keller Zambrano",
     dorsal: 11,
     posicion: "Medio",
-    piernaHabil: "PENDIENTE",
-    altura: "PENDIENTE",
+    piernaHabil: "Derecha",
+    altura: "1.80m",
     fechaNacimiento: "2007-02-02",
-    nacionalidad: "PENDIENTE",
+    nacionalidad: "Venezuela",
     foto: "img/jugadores/11-Keller-Zambrano.jpg",
     estado: "Nuevo fichaje"
   },
@@ -322,19 +322,6 @@ const jugadores = [
     fechaNacimiento: "2000-01-10",
     nacionalidad: "Colombia",
     foto: "img/jugadores/17-Leonardo-Cundumi.jpg",
-    estado: "Nuevo fichaje"
-  },
-  {
-    // Nombre sin confirmar del todo (ver nota aparte). Sin fecha de nacimiento real
-    // (no aparece en el PDF de la Federación) — fecha placeholder, hay que corregirla.
-    nombre: "Cheikh Ladijane",
-    dorsal: 13,
-    posicion: "Extremo",
-    piernaHabil: "Derecha",
-    altura: "1.75m",
-    fechaNacimiento: "2004-01-01",
-    nacionalidad: "Senegal",
-    foto: "img/jugadores/13-Cheikh-Ladijane.jpg",
     estado: "Nuevo fichaje"
   }
 ];
@@ -378,7 +365,7 @@ const jugadores = [
 const calendario = [
   { fecha: "2026-09-20", hora: "", rival: "Aktimel R.C.F.",              lugar: "Local",     resultado: "12 - 1" }, // Jornada 1
   { fecha: "2026-09-26", hora: "", rival: "Valdecanal C.D.",             lugar: "Visitante", resultado: "1 - 2" }, // Jornada 2
-  { fecha: "2026-10-04", hora: "", rival: "Atlético Aragón 2025",        lugar: "Local",     resultado: null }, // Jornada 3
+  { fecha: "2026-10-04", hora: "", rival: "Atlético Aragón 2025",        lugar: "Local",     resultado: "4 - 1" }, // Jornada 3
   { fecha: "2026-10-18", hora: "", rival: "Once Amigos F.C.A.",          lugar: "Visitante", resultado: null }, // Jornada 4
   { fecha: "2026-10-25", hora: "", rival: "Submarino C.F.",              lugar: "Local",     resultado: null }, // Jornada 5
   { fecha: "2026-11-01", hora: "", rival: "Fleta C.D. \"C\"",            lugar: "Visitante", resultado: null }, // Jornada 6
