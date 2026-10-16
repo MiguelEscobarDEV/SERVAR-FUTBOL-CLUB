@@ -366,7 +366,7 @@ const calendario = [
   { fecha: "2026-09-20", hora: "", rival: "Aktimel R.C.F.",              lugar: "Local",     resultado: "12 - 1" }, // Jornada 1
   { fecha: "2026-09-26", hora: "", rival: "Valdecanal C.D.",             lugar: "Visitante", resultado: "1 - 2" }, // Jornada 2
   { fecha: "2026-10-04", hora: "", rival: "Atlético Aragón 2025",        lugar: "Local",     resultado: "4 - 1" }, // Jornada 3
-  { fecha: "2026-10-18", hora: "", rival: "Once Amigos F.C.A.",          lugar: "Visitante", resultado: null }, // Jornada 4
+  { fecha: "2026-10-17", hora: "", rival: "Once Amigos F.C.A.",          lugar: "Visitante", resultado: null }, // Jornada 4
   { fecha: "2026-10-25", hora: "", rival: "Submarino C.F.",              lugar: "Local",     resultado: null }, // Jornada 5
   { fecha: "2026-11-01", hora: "", rival: "Fleta C.D. \"C\"",            lugar: "Visitante", resultado: null }, // Jornada 6
   { fecha: "2026-11-08", hora: "", rival: "Peña Atlética La Muela Club", lugar: "Local",     resultado: null }, // Jornada 7
